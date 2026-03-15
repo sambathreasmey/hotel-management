@@ -17,7 +17,7 @@ public class TempFileCleanupJob {
     private final FileRepository fileRepository;
     private final FileStorageService fileStorageService;
 
-    @Scheduled(cron = "0 * * * * *")
+    @Scheduled(cron = "0 1/5 * * * *")
 //    @Scheduled(cron = "0 0 * * * *")
     public void cleanup() {
 
