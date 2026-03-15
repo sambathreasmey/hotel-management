@@ -1,0 +1,16 @@
+version: '1.0'
+
+services:
+   postgres:
+    image: postgres:16-alpine
+    container_name: postgres
+    environment:
+      POSTGRES_USER: smey
+      POSTGRES_PASSWORD: smey123
+      POSTGRES_DB: hotel_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_hotel_data:/var/lib/postgresql/data
+volumes:
+  postgres_hotel_data:
